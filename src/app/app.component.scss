@@ -1,3 +1,13 @@
+$white: #e7e7e7;
+$lime: #8acc07;
+$light-grey: #d7d7d7;
+$highlight-blue: #375871;
+$grey: #969696;
+$dark-grey: #3a3a3a;
+$orange: #f16501;
+$teal: #5eaba2;
+$brass: #515118;
+
 main {
   width: 100%;
   min-height: 100%;
@@ -5,7 +15,12 @@ main {
   justify-content: center;
   box-sizing: inherit;
   position: relative;
-  color: rgb(231, 231, 231);
+  color: $white;
+}
+
+.intro {
+  text-align: left;
+  font-size: 12px;
 }
 
 .container {
@@ -17,7 +32,7 @@ main {
   padding: 1em;
 
   .title-bar {
-    background: rgb(58, 58, 58);
+    background: $dark-grey;
     min-height: 30px;
     display: flex;
     align-items: center; /* Centers the text vertically */
@@ -29,38 +44,68 @@ main {
 
     .section {
       .title {
-        color: #8acc07;
+        color: $lime;
         margin-bottom: 1em;
       }
       .cmd {
-        color: rgb(150, 150, 150);
+        color: $light-grey;
+        background-color: $highlight-blue;
+        padding: 0px 3px;
       }
       .sec-content {
         margin: 5px 0px;
 
         .title {
-          color: #cc5907;
+          color: $orange;
           margin: 5px 0px;
 
           > span {
-            color: rgb(231, 231, 231);
+            color: $white;
             > a {
               text-decoration: underline;
-              color: rgb(231, 231, 231);
+              color: $white;
             }
           }
 
           > ul {
-            color: #5eaba2;
+            color: $teal;
+            margin: 0px;
+            padding-inline-start: 2em;
 
             > li {
               margin-left: 1em;
               list-style-type: none;
-              color: rgb(231, 231, 231);
+              color: $white;
             }
           }
         }
       }
     }
   }
+}
+
+.item-header {
+  margin: 1em 0em;
+}
+
+.orange {
+  color: $orange;
+}
+
+.teal {
+  color: $teal;
+}
+
+.white {
+  color: $white;
+}
+
+.grey {
+  color: $grey;
+}
+
+.work-present {
+  background: $brass;
+  padding: 0px 3px;
+  text-decoration: underline;
 }

@@ -7,6 +7,12 @@
 		</div>
 
 		<div class="content">
+
+			<div class="intro">👋 I'm Emmmanuel Jerez</div>
+			<div class="intro">☕ Fullstack Developer by Profession</div>
+			<div class="intro">🎨 Artist by Passion</div>
+			<div class="intro" style="margin-bottom: 1em;">⚡ Tech Enthusiast</div>
+
 			<div class="section">
 
 				<!-- CONTACTS  -->
@@ -19,6 +25,12 @@
 							email:
 							<span>
 								<a href="mailto:{{ email }}"><i>{{ email }}</i></a>
+							</span>
+						</div>
+						<div class="title">
+							linkedin:
+							<span>
+								<a href="{{ linkedin }}" target="_blank"><i>linkedin.com/in/emnljrz</i></a>
 							</span>
 						</div>
 						<div class="title">
@@ -57,8 +69,69 @@
 					</div>
 				</div>
 
-			
-				
+				<!-- EXPERIENCE -->
+				<div class="title">
+					emnljrz ~$
+					<span class="cmd">ls experiences</span>
+
+					@for (work of works; track work;) {
+						<div class="item-header">
+							<div class="orange">
+								<strong>{{ work.position }}</strong>
+							</div>
+							<div class="teal">
+								<i>{{ work.company }}</i>
+							</div>
+							<div class="white">
+								{{ work.startDate}} - 
+								@if (work.endDate === 'Present') {
+									<span class="work-present">
+										<i>{{ work.endDate }}</i>
+									</span>
+								} @else {
+									{{ work.endDate }}
+								}
+							</div>
+							<div class="grey">
+								{{ work.location }}
+							</div>
+						</div>
+					}
+
+				</div>
+
+				<!-- EDUCATION -->
+				<div class="title">
+					emnljrz ~$
+					<span class="cmd">ls education</span>
+
+					@for (edu of educations; track edu;) {
+						<div class="item-header">
+							<div class="orange">
+								<strong>{{ edu.degree }}</strong>
+							</div>
+							<div class="teal">
+								<i>{{ edu.school }}</i>
+							</div>
+							<div class="white">
+								{{ edu.startDate}} - {{ edu.endDate }}
+							</div>
+							<div class="grey">
+								{{ edu.location }}
+							</div>
+						</div>
+					}
+				</div>
+
+				<!-- NEXT -->
+				<div class="title">
+					emnljrz ~$
+					<span class="grey">sudo continue learning...</span>
+					@if (blink) {
+						<span class="grey">|</span>
+					}
+				</div>
+
 			</div>
 
 		</div>
