@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   public yearNow: number = new Date().getFullYear();
 
-  public email = 'emnljrz@gmail.com';
+  public email = 'emnljrz@outlook.com';
   public location = 'General Santos City, Philippines';
   public linkedin = 'https://www.linkedin.com/in/emnljrz';
   public blink = false;
